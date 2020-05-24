@@ -23,52 +23,38 @@
 // http://www.opensource.org/licenses/mit-license.php
 //
 ////////////////////////////////////////////////////////////////////////////////
-#ifndef INCLUDED_TLSCLIENT
-#define INCLUDED_TLSCLIENT
-
-#ifdef HAVE_LIBGNUTLS
+#ifndef INCLUDED_SIMPLESERVER
+#define INCLUDED_SIMPLESERVER
 
 #include <string>
-#include <gnutls/gnutls.h>
+#include <TCPServer.h>
 
-#include "TCPClient.h"
-
-class TLSClient: public TCPClient
+class SimpleTransaction: public TCPTransaction
 {
+private:
+  std::string                 _address {""};
+  int                         _port    {0};
+  int                         _socket  {0};
+
 public:
-  enum trust_level { strict, ignore_hostname, allow_all };
-
-  TLSClient () = default;
-  ~TLSClient ();
-  void limit (int);
-  void debug (int);
-  void trust (const enum trust_level);
-  void ciphers (const std::string&);
-  void init (const std::string&, const std::string&, const std::string&);
-  virtual void connect (const std::string&, const std::string&) override;
-  void bye ();
-  int verify_certificate() const;
-
+  virtual void init (TCPServer&) override;
   virtual void send (const std::string&) override;
   virtual void recv (std::string&) override;
 
+  virtual ClientAddress getClient() const override;
+};
+
+class SimpleServer: public TCPServer
+{
 private:
-  std::string                      _ca          {""};
-  std::string                      _cert        {""};
-  std::string                      _key         {""};
-  std::string                      _ciphers     {""};
-  std::string                      _host        {""};
-  std::string                      _port        {""};
-  gnutls_certificate_credentials_t _credentials {};
-  gnutls_session_t                 _session     {0};
-  int                              _socket      {0};
-  int                              _limit       {0};
-  bool                             _debug       {false};
-  enum trust_level                 _trust       {strict};
+  int _socket {0};
+  virtual int socket() override {return _socket; };
+public:
+  virtual ~SimpleServer();
+
+  virtual void bind (const std::string& host, const std::string& port, const std::string& family) override;
+  virtual void listen () override;
+  virtual std::unique_ptr<TCPTransaction> accept () override;
 };
 
 #endif
-#endif
-
-////////////////////////////////////////////////////////////////////////////////
-

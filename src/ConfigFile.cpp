@@ -79,7 +79,10 @@ void Config::load (const std::string& file, int nest /* = 1 */)
     _original_file = File (file);
 
     if (! _original_file.exists ())
+    {
+        std::cout << "file: "<< file << std::endl;
       throw std::string ("ERROR: Configuration file not found.");
+    }
 
     if (! _original_file.readable ())
       throw std::string ("ERROR: Configuration file cannot be read (insufficient privileges).");

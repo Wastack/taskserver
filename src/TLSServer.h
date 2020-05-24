@@ -30,26 +30,28 @@
 
 #include <string>
 #include <gnutls/gnutls.h>
+#include <TCPServer.h>
 
 class TLSTransaction;
 
-class TLSServer
+class TLSServer final: public TCPServer
 {
 public:
   enum trust_level { strict, allow_all };
 
   TLSServer ();
   ~TLSServer ();
-  void queue (int);
-  void debug (int);
+
+  void debug (int) override;
+  virtual int socket() override {return _socket;};
   enum trust_level trust () const;
   void trust (const enum trust_level);
   void ciphers (const std::string&);
   void dh_bits (unsigned int dh_bits);
   void init (const std::string&, const std::string&, const std::string&, const std::string&);
-  void bind (const std::string&, const std::string&, const std::string&);
-  void listen ();
-  void accept (TLSTransaction&);
+  void bind (const std::string&, const std::string&, const std::string&) override;
+  void listen () override;
+  std::unique_ptr<TCPTransaction> accept() override;
 
   friend class TLSTransaction;
 
@@ -63,26 +65,23 @@ private:
   gnutls_certificate_credentials_t _credentials {};
   gnutls_priority_t                _priorities  {};
   int                              _socket      {0};
-  int                              _queue       {5};
-  bool                             _debug       {false};
   enum trust_level                 _trust       {TLSServer::strict};
   bool                             _priorities_init {false};
 };
 
-class TLSTransaction
+class TLSTransaction: public TCPTransaction
 {
 public:
   TLSTransaction () = default;
   ~TLSTransaction ();
-  void init (TLSServer&);
+  void init (TCPServer&) override;
   void bye ();
-  void debug ();
   void trust (const enum TLSServer::trust_level);
   void limit (int);
   int verify_certificate () const;
-  void send (const std::string&);
-  void recv (std::string&);
-  void getClient (std::string&, int&);
+  void send (const std::string&) override;
+  void recv (std::string&) override;
+  ClientAddress getClient () const override;
 
 private:
   int                         _socket  {0};

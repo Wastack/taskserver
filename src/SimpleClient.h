@@ -23,51 +23,30 @@
 // http://www.opensource.org/licenses/mit-license.php
 //
 ////////////////////////////////////////////////////////////////////////////////
-#ifndef INCLUDED_TLSCLIENT
-#define INCLUDED_TLSCLIENT
+#ifndef INCLUDED_SIMPLECLIENT
+#define INCLUDED_SIMPLECLIENT
 
-#ifdef HAVE_LIBGNUTLS
 
 #include <string>
-#include <gnutls/gnutls.h>
-
 #include "TCPClient.h"
 
-class TLSClient: public TCPClient
+class SimpleClient final: public TCPClient
 {
 public:
-  enum trust_level { strict, ignore_hostname, allow_all };
 
-  TLSClient () = default;
-  ~TLSClient ();
-  void limit (int);
-  void debug (int);
-  void trust (const enum trust_level);
-  void ciphers (const std::string&);
-  void init (const std::string&, const std::string&, const std::string&);
-  virtual void connect (const std::string&, const std::string&) override;
-  void bye ();
-  int verify_certificate() const;
+  SimpleClient () = default;
+  ~SimpleClient ();
 
+  virtual void connect (const std::string& host, const std::string& port) override;
   virtual void send (const std::string&) override;
   virtual void recv (std::string&) override;
 
 private:
-  std::string                      _ca          {""};
-  std::string                      _cert        {""};
-  std::string                      _key         {""};
-  std::string                      _ciphers     {""};
   std::string                      _host        {""};
   std::string                      _port        {""};
-  gnutls_certificate_credentials_t _credentials {};
-  gnutls_session_t                 _session     {0};
   int                              _socket      {0};
-  int                              _limit       {0};
-  bool                             _debug       {false};
-  enum trust_level                 _trust       {strict};
 };
 
-#endif
 #endif
 
 ////////////////////////////////////////////////////////////////////////////////

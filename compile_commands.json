@@ -1,0 +1,197 @@
+[
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/taskd.dir/admin.cpp.o -c /home/wastack/sources/taskserver/src/admin.cpp",
+  "file": "/home/wastack/sources/taskserver/src/admin.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/taskd.dir/api.cpp.o -c /home/wastack/sources/taskserver/src/api.cpp",
+  "file": "/home/wastack/sources/taskserver/src/api.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/taskd.dir/client.cpp.o -c /home/wastack/sources/taskserver/src/client.cpp",
+  "file": "/home/wastack/sources/taskserver/src/client.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/taskd.dir/ConfigFile.cpp.o -c /home/wastack/sources/taskserver/src/ConfigFile.cpp",
+  "file": "/home/wastack/sources/taskserver/src/ConfigFile.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/taskd.dir/config.cpp.o -c /home/wastack/sources/taskserver/src/config.cpp",
+  "file": "/home/wastack/sources/taskserver/src/config.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/taskd.dir/daemon.cpp.o -c /home/wastack/sources/taskserver/src/daemon.cpp",
+  "file": "/home/wastack/sources/taskserver/src/daemon.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/taskd.dir/diag.cpp.o -c /home/wastack/sources/taskserver/src/diag.cpp",
+  "file": "/home/wastack/sources/taskserver/src/diag.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/taskd.dir/Database.cpp.o -c /home/wastack/sources/taskserver/src/Database.cpp",
+  "file": "/home/wastack/sources/taskserver/src/Database.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/taskd.dir/help.cpp.o -c /home/wastack/sources/taskserver/src/help.cpp",
+  "file": "/home/wastack/sources/taskserver/src/help.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/taskd.dir/init.cpp.o -c /home/wastack/sources/taskserver/src/init.cpp",
+  "file": "/home/wastack/sources/taskserver/src/init.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/taskd.dir/Server.cpp.o -c /home/wastack/sources/taskserver/src/Server.cpp",
+  "file": "/home/wastack/sources/taskserver/src/Server.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/taskd.dir/SimpleClient.cpp.o -c /home/wastack/sources/taskserver/src/SimpleClient.cpp",
+  "file": "/home/wastack/sources/taskserver/src/SimpleClient.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/taskd.dir/SimpleServer.cpp.o -c /home/wastack/sources/taskserver/src/SimpleServer.cpp",
+  "file": "/home/wastack/sources/taskserver/src/SimpleServer.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/taskd.dir/Task.cpp.o -c /home/wastack/sources/taskserver/src/Task.cpp",
+  "file": "/home/wastack/sources/taskserver/src/Task.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/taskd.dir/TCPClient.cpp.o -c /home/wastack/sources/taskserver/src/TCPClient.cpp",
+  "file": "/home/wastack/sources/taskserver/src/TCPClient.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/taskd.dir/TLSClient.cpp.o -c /home/wastack/sources/taskserver/src/TLSClient.cpp",
+  "file": "/home/wastack/sources/taskserver/src/TLSClient.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/taskd.dir/TCPServer.cpp.o -c /home/wastack/sources/taskserver/src/TCPServer.cpp",
+  "file": "/home/wastack/sources/taskserver/src/TCPServer.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/taskd.dir/TLSServer.cpp.o -c /home/wastack/sources/taskserver/src/TLSServer.cpp",
+  "file": "/home/wastack/sources/taskserver/src/TLSServer.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/taskd.dir/util.cpp.o -c /home/wastack/sources/taskserver/src/util.cpp",
+  "file": "/home/wastack/sources/taskserver/src/util.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/libshared.dir/libshared/src/Color.cpp.o -c /home/wastack/sources/taskserver/src/libshared/src/Color.cpp",
+  "file": "/home/wastack/sources/taskserver/src/libshared/src/Color.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/libshared.dir/libshared/src/Datetime.cpp.o -c /home/wastack/sources/taskserver/src/libshared/src/Datetime.cpp",
+  "file": "/home/wastack/sources/taskserver/src/libshared/src/Datetime.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/libshared.dir/libshared/src/Duration.cpp.o -c /home/wastack/sources/taskserver/src/libshared/src/Duration.cpp",
+  "file": "/home/wastack/sources/taskserver/src/libshared/src/Duration.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/libshared.dir/libshared/src/FS.cpp.o -c /home/wastack/sources/taskserver/src/libshared/src/FS.cpp",
+  "file": "/home/wastack/sources/taskserver/src/libshared/src/FS.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/libshared.dir/libshared/src/JSON.cpp.o -c /home/wastack/sources/taskserver/src/libshared/src/JSON.cpp",
+  "file": "/home/wastack/sources/taskserver/src/libshared/src/JSON.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/libshared.dir/libshared/src/Lexer.cpp.o -c /home/wastack/sources/taskserver/src/libshared/src/Lexer.cpp",
+  "file": "/home/wastack/sources/taskserver/src/libshared/src/Lexer.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/libshared.dir/libshared/src/Log.cpp.o -c /home/wastack/sources/taskserver/src/libshared/src/Log.cpp",
+  "file": "/home/wastack/sources/taskserver/src/libshared/src/Log.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/libshared.dir/libshared/src/Msg.cpp.o -c /home/wastack/sources/taskserver/src/libshared/src/Msg.cpp",
+  "file": "/home/wastack/sources/taskserver/src/libshared/src/Msg.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/libshared.dir/libshared/src/Pig.cpp.o -c /home/wastack/sources/taskserver/src/libshared/src/Pig.cpp",
+  "file": "/home/wastack/sources/taskserver/src/libshared/src/Pig.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/libshared.dir/libshared/src/RX.cpp.o -c /home/wastack/sources/taskserver/src/libshared/src/RX.cpp",
+  "file": "/home/wastack/sources/taskserver/src/libshared/src/RX.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/libshared.dir/libshared/src/Timer.cpp.o -c /home/wastack/sources/taskserver/src/libshared/src/Timer.cpp",
+  "file": "/home/wastack/sources/taskserver/src/libshared/src/Timer.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/libshared.dir/libshared/src/format.cpp.o -c /home/wastack/sources/taskserver/src/libshared/src/format.cpp",
+  "file": "/home/wastack/sources/taskserver/src/libshared/src/format.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/libshared.dir/libshared/src/ip.cpp.o -c /home/wastack/sources/taskserver/src/libshared/src/ip.cpp",
+  "file": "/home/wastack/sources/taskserver/src/libshared/src/ip.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/libshared.dir/libshared/src/shared.cpp.o -c /home/wastack/sources/taskserver/src/libshared/src/shared.cpp",
+  "file": "/home/wastack/sources/taskserver/src/libshared/src/shared.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/libshared.dir/libshared/src/unicode.cpp.o -c /home/wastack/sources/taskserver/src/libshared/src/unicode.cpp",
+  "file": "/home/wastack/sources/taskserver/src/libshared/src/unicode.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/libshared.dir/libshared/src/utf8.cpp.o -c /home/wastack/sources/taskserver/src/libshared/src/utf8.cpp",
+  "file": "/home/wastack/sources/taskserver/src/libshared/src/utf8.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/libshared.dir/libshared/src/wcwidth6.cpp.o -c /home/wastack/sources/taskserver/src/libshared/src/wcwidth6.cpp",
+  "file": "/home/wastack/sources/taskserver/src/libshared/src/wcwidth6.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/src",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/taskd_executable.dir/taskd.cpp.o -c /home/wastack/sources/taskserver/src/taskd.cpp",
+  "file": "/home/wastack/sources/taskserver/src/taskd.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/test",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src -I/home/wastack/sources/taskserver/test  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/config.t.dir/config.t.cpp.o -c /home/wastack/sources/taskserver/test/config.t.cpp",
+  "file": "/home/wastack/sources/taskserver/test/config.t.cpp"
+},
+{
+  "directory": "/home/wastack/sources/taskserver/test",
+  "command": "/usr/bin/c++   -I/home/wastack/sources/taskserver -I/home/wastack/sources/taskserver/src -I/home/wastack/sources/taskserver/src/libshared/src -I/home/wastack/sources/taskserver/test  -Wall -Wextra -Wsign-compare -Wreturn-type -std=c++11  -g   -std=gnu++17 -o CMakeFiles/config.t.dir/test.cpp.o -c /home/wastack/sources/taskserver/test/test.cpp",
+  "file": "/home/wastack/sources/taskserver/test/test.cpp"
+}
+]

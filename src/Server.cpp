@@ -204,23 +204,24 @@ void Server::beginServer ()
   if (signal (SIGUSR2, signal_handler) == SIG_ERR)
     throw std::string ("Failed to register handler for SIGUSR2... Exiting.");
 
-  TLSServer server;
-  if (_config)
-  {
-    server.debug (_config->getInteger ("debug.tls"));
+  std::unique_ptr<TCPServer> server = create_server(_config->getBoolean("tls_disabled"));
+  server->debug (_config->getInteger ("debug.tls"));
 
+
+  if(TLSServer* t_server = dynamic_cast<TLSServer*>(server.get()); t_server != nullptr)
+  {
     std::string ciphers = _config->get ("ciphers");
     if (ciphers != "")
     {
-      server.ciphers (ciphers);
+      t_server->ciphers (ciphers);
       if (_log) _log->write (format ("Using ciphers: {1}", ciphers));
     }
 
     std::string trust = _config->get ("trust");
     if (trust == "allow all")
-      server.trust (TLSServer::allow_all);
+      t_server->trust (TLSServer::allow_all);
     else if (trust == "strict")
-      server.trust (TLSServer::strict);
+      t_server->trust (TLSServer::strict);
     else if (_log)
       _log->write (format ("Invalid 'trust' setting value of '{1}'", trust));
 
@@ -231,17 +232,17 @@ void Server::beginServer ()
       dh_bits = 0;
     }
 
-    server.dh_bits (dh_bits);
+    t_server->dh_bits (dh_bits);
     if (_log) _log->write (format ("Using dh_bits: {1}", dh_bits));
-  }
 
-  server.init (_ca_file,        // CA
-               _crl_file,       // CRL
-               _cert_file,      // Cert
-               _key_file);      // Key
-  server.queue (_queue_size);
-  server.bind (_host, _port, _family);
-  server.listen ();
+    t_server->init (_ca_file,        // CA
+                 _crl_file,       // CRL
+                 _cert_file,      // Cert
+                 _key_file);      // Key
+  }
+  server->queue (_queue_size);
+  server->bind (_host, _port, _family);
+  server->listen ();
 
   if (_log) _log->write ("Server ready");
 
@@ -250,23 +251,25 @@ void Server::beginServer ()
   {
     try
     {
-      TLSTransaction tx;
-      tx.trust (server.trust ());
-      server.accept (tx);
+      std::unique_ptr<TCPTransaction> tx = server->accept();
+      if( TLSTransaction* t = dynamic_cast<TLSTransaction*>(tx.get()); t != nullptr)
+        t->trust (dynamic_cast<TLSServer*>(server.get())->trust ());
 
       if (_sighup)
         throw "SIGHUP shutdown.";
 
       // Get client address and port, for logging.
       if (_log_clients)
-        tx.getClient (_client_address, _client_port);
+      {
+          std::tie(_client_address, _client_port) = tx->getClient();
+      }
 
       // Metrics.
       Timer timer;
       timer.start ();
 
       std::string input;
-      tx.recv (input);
+      tx->recv (input);
 
       // Handle the request.
       ++_request_count;
@@ -275,7 +278,7 @@ void Server::beginServer ()
       std::string output;
       handler (input, output);
       if (output.length ())
-        tx.send (output);
+        tx->send (output);
 
       if (_log)
       {

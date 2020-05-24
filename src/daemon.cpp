@@ -286,8 +286,8 @@ void Daemon::handle_statistics (const Msg& in, Msg& out)
 // Sync request.
 void Daemon::handle_sync (const Msg& in, Msg& out)
 {
-  if (! _db.authenticate (in, out))
-    return;
+  //if (! _db.authenticate (in, out))
+  //  return;
 
   // Support only Taskserver protocol v1.
   taskd_requireHeader (in, "protocol", "v1");
@@ -904,21 +904,24 @@ void command_server (Database& db)
       server.setPidFile  (db._config->get ("pid.file"));
     }
 
-    // It just runs until you kill it.
-    File ca (db._config->get ("ca.cert"));
-    if (ca.exists ())
-      server.setCAFile (ca._data);
+    if (!db._config->getBoolean("tls_disabled"))
+    {
+      // It just runs until you kill it.
+      File ca (db._config->get ("ca.cert"));
+      if (ca.exists ())
+        server.setCAFile (ca._data);
 
-    File cert (db._config->get ("server.cert"));
-    server.setCertFile (cert._data);
+      File cert (db._config->get ("server.cert"));
+      server.setCertFile (cert._data);
 
-    File key (db._config->get ("server.key"));
-    server.setKeyFile (key._data);
+      File key (db._config->get ("server.key"));
+      server.setKeyFile (key._data);
 
-    File crl (db._config->get ("server.crl"));
-    if (crl.exists ())
-      server.setCRLFile (crl._data);
+      File crl (db._config->get ("server.crl"));
+      if (crl.exists ())
+        server.setCRLFile (crl._data);
 
+    }
     server.beginServer ();
   }
 

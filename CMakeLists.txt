@@ -6,6 +6,7 @@ include (CheckFunctionExists)
 include (CheckStructHasMember)
 
 set (HAVE_CMAKE true)
+set (CMAKE_CXX_STANDARD 17)
 
 project (taskd)
 include (CXXSniffer)

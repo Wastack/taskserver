@@ -165,24 +165,28 @@ bool taskd_sendMessage (
   auto certificate = config.get ("api.cert");
   auto key         = config.get ("api.key");
   auto ciphers     = config.get ("ciphers");
+  bool tls_disabled = config.get ("tls_disabled").empty();
 
   try
   {
-    TLSClient client;
-    client.debug (config.getInteger ("debug.tls"));
+    std::unique_ptr<TCPClient> client = create_client(tls_disabled);
+    client->debug (config.getInteger ("debug.tls")); // TODO rename
 
-    auto trust_level = config.get ("trust");
-    client.trust (trust_level == "allow all"       ? TLSClient::allow_all       :
-                  trust_level == "ignore hostname" ? TLSClient::ignore_hostname :
-                                                     TLSClient::strict);
-    client.ciphers (ciphers);
-    client.init (ca, certificate, key);
-    client.connect (server, port);
-    client.send (out.serialize () + "\n");
+    if( auto* tlsClient = dynamic_cast<TLSClient*>(client.get()); tlsClient != nullptr)
+    {
+      auto trust_level = config.get ("trust");
+      tlsClient->trust (trust_level == "allow all"       ? TLSClient::allow_all       :
+                    trust_level == "ignore hostname" ? TLSClient::ignore_hostname :
+                                                       TLSClient::strict);
+      tlsClient->ciphers (ciphers);
+      tlsClient->init (ca, certificate, key);
+    }
+    client->connect (server, port);
+    client->send (out.serialize () + "\n");
 
     std::string response;
-    client.recv (response);
-    client.bye ();
+    client->recv (response);
+    client->bye ();
 
     in.parse (response);
 
